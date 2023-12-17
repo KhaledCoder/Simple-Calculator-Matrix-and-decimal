@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+
 package com.mycompany.myproject;
-//A == 65 , Z = 90 , a == 97 , z == 122 , 0 == 48
 
-import static java.lang.Math.abs;
 import java.util.Scanner;
-//import java.util.Random;
-//import static java.lang.Math.cos;
-
 public class Myproject {
 
     public static Scanner scan() {
