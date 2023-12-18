@@ -124,7 +124,15 @@ public class Myproject {
                 return;
             }
             case '/': {
-                System.out.println("result: " + CalculatorDecimal.div(number1, number2));
+                if(number2 != 0){
+                    System.out.println("result: " + CalculatorDecimal.div(number1, number2));
+                    return;
+                }
+                else
+                {
+                    System.out.println("invalid value , please try again");
+                    return;
+                }
             }
             case '^': {
                 System.out.println("result: " + CalculatorDecimal.pow(number1, number2));
