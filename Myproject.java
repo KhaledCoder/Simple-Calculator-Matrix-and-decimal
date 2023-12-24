@@ -160,7 +160,7 @@ public class Myproject {
                 int counter = in.nextInt();
                 double number;
                 for (int i = 1; i <= counter; i++) {
-                    System.out.print("number " + i + ":");
+                    System.out.print("number " + i + ": ");
                     number = in.nextDouble();
                     sub = CalculatorDecimal.sub(number, counter);
                 }
