@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.mycompany.myproject;
 
 import java.util.Scanner;
 
-/**
- *
- * @author New 1000 Meeza
- */
 public class Myproject {
 
     public static void main(String[] args) {
@@ -138,7 +131,7 @@ public class Myproject {
     public static void Decimal() {
         Scanner in = scan();
         char operation;
-        System.out.print("What is the type of operation? ['+' or '-' or '*' or '/' or power'^']: ");
+        System.out.print("What is the type of operation? ['+' or '-' or '*' or '/' or power'^' or SquareRoot'q' or factorial'f' or sin's' or cos 'c' or tan't']: ");
         operation = in.next().charAt(0);
         switch (operation) {
             case '+': {
@@ -204,6 +197,36 @@ public class Myproject {
                 System.out.print("power: ");
                 int pow = in.nextInt();
                 System.out.println("result: " + CalculatorDecimal.pow(number, pow));
+                return;
+            }
+            case 'q': {
+                System.out.print("Enter the number: ");
+                double num = in.nextDouble();
+                System.out.println("result: " + CalculatorDecimal.square(num));
+                return;
+            }
+            case 'f': {
+                System.out.print("Enter the number: ");
+                int num = in.nextInt();
+                System.out.println("result: " + CalculatorDecimal.fact(num));
+                return;
+            }
+            case 'c': {
+                System.out.print("Enter the radian: ");
+                double num = in.nextDouble();
+                System.out.println("result: " + CalculatorDecimal.cos(num));
+                return;
+            }
+            case 's': {
+                System.out.print("Enter the radian: ");
+                double num = in.nextDouble();
+                System.out.println("result: " + CalculatorDecimal.sin(num));
+                return;
+            }
+            case 't': {
+                System.out.print("Enter the radian: ");
+                double num = in.nextDouble();
+                System.out.println("result: " + CalculatorDecimal.tan(num));
                 return;
             }
             default: {
