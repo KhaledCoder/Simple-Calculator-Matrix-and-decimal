@@ -66,7 +66,7 @@ public class Myproject {
         System.out.print("What is the type of operation? ['+' or '-' or '*']: ");
         char operation = in.next().charAt(0);
         if (operation == '+') {
-            System.out.println("Note: the number of rows in the first determinant must be equal to the number of rows in the second determinant, as well as the number of columns.");
+            System.out.println("Note: the number of rows in the first determinant must be equal to the number of rows in the second determinant , as well as the number of columns and more determinant.");
             System.out.print("How many matrices do you want to add?: ");
             int counter = in.nextInt();
             System.out.print("row: ");
@@ -75,17 +75,17 @@ public class Myproject {
             int column = in.nextInt();
             System.out.println("______Matrix1______");
             int result[][] = new int[row][column];
-            result = GetMatrix(row,column);
+            result = GetMatrix(row, column);
             for (int c = 1; c < counter; c++) {
                 System.out.println("______" + "Matrix(" + (c + 1) + ")______");
                 int Matrix[][] = GetMatrix(row, column);
-                result = CalculatorMatrix.add(result,Matrix);
+                result = CalculatorMatrix.add(result, Matrix);
             }
             PrintMatrix(result);
             return;
         } else if (operation == '-') {
-            System.out.println("Note: To add two matrices, the number of rows in the first determinant must be equal to the number of rows in the second determinant, as well as the number of columns.");
-            System.out.println("How many matrices do you want to subtraction?");
+            System.out.println("Note: the number of rows in the first determinant must be equal to the number of rows in the second determinant , as well as the number of columns and more determinant.");
+            System.out.print("How many matrices do you want to subtraction?: ");
             int counter = in.nextInt();
             System.out.print("row: ");
             int row = in.nextInt();
@@ -93,11 +93,11 @@ public class Myproject {
             int column = in.nextInt();
             System.out.println("______Matrix1______");
             int result[][] = new int[row][column];
-            result = GetMatrix(row,column);
+            result = GetMatrix(row, column);
             for (int c = 1; c < counter; c++) {
                 System.out.println("______" + "Matrix(" + (c + 1) + ")______");
                 int Matrix[][] = GetMatrix(row, column);
-                result = CalculatorMatrix.subtraction(result,Matrix);
+                result = CalculatorMatrix.subtraction(result, Matrix);
             }
             PrintMatrix(result);
             return;
@@ -142,27 +142,27 @@ public class Myproject {
         operation = in.next().charAt(0);
         switch (operation) {
             case '+': {
-                double sum = 0;
                 System.out.print("How many numbers do you want to add?: ");
                 int counter = in.nextInt();
-                double number;
-                for (int i = 1; i <= counter; i++) {
-                    System.out.print("number " + i + ":");
-                    number = in.nextDouble();
-                    sum = CalculatorDecimal.add(number, counter);
+                System.out.print("Number1: ");
+                double sum = in.nextDouble();
+                for (int i = 2; i <= counter; i++) {
+                    System.out.print("number " + i + ": ");
+                    double number = in.nextDouble();
+                    sum = CalculatorDecimal.add(sum, number);
                 }
                 System.out.println("result: " + sum);
                 return;
             }
             case '-': {
-                double sub = 0;
                 System.out.print("How many numbers do you want to subtraction?: ");
                 int counter = in.nextInt();
-                double number;
-                for (int i = 1; i <= counter; i++) {
-                    System.out.print("number " + i + ": ");
-                    number = in.nextDouble();
-                    sub = CalculatorDecimal.sub(number, counter);
+                System.out.print("Number1: ");
+                double sub = in.nextDouble();
+                for (int i = 2; i <= counter; i++) {
+                    System.out.print("number " + i + ":");
+                    double number = in.nextDouble();
+                    sub = CalculatorDecimal.sub(sub, number);
                 }
                 System.out.println("result: " + sub);
                 return;
@@ -189,7 +189,7 @@ public class Myproject {
                     System.out.print("number " + i + ": ");
                     double number = in.nextDouble();
                     if (number != 0) {
-                        div = CalculatorDecimal.div(div,number);
+                        div = CalculatorDecimal.div(div, number);
                     } else {
                         System.out.println("invalid value , please try again");
                         return;
